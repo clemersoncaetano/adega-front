@@ -8,7 +8,7 @@ const StatusLoja: React.FC = () => {
       const agora: Date = new Date();
       const hora: number = agora.getHours();
 
-      // Horário da loja (ajuste aqui)
+   
       const abre: number = 8;
       const fecha: number = 24;
 
