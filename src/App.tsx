@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./index.css";
-import StatusLoja from "../src/conponents/StatusLoja";
+import StatusLoja from "./conponents/status/StatusLoja";
 
 
 interface Categoria {
@@ -44,6 +44,14 @@ export default function App() {
       price: 22,
       image: "https://http2.mlstatic.com/D_Q_NP_852165-MLB74226020637_012024-O.webp",
       categoriaId: 1
+    },
+      {
+      id: 4,
+      name: "whisky baly",
+      description: "whisky gelado",
+      price: 22,
+      image: "https://http2.mlstatic.com/D_Q_NP_852165-MLB74226020637_012024-O.webp",
+      categoriaId: 4
     }
   ];
 

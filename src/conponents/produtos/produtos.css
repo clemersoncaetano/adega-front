@@ -1,0 +1,86 @@
+.produtos-container {
+  padding: 20px;
+}
+
+/* CATEGORIAS */
+
+.categorias-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.categorias-bar button {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.categorias-bar button.ativo {
+  background: #000;
+  color: #fff;
+}
+
+/* LISTA */
+
+.lista-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* CARD */
+
+.card-produto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  margin: 0;
+}
+
+.info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.info strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.imagem img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* BOTÃO + */
+
+.btn-add {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+
+  background: purple;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}

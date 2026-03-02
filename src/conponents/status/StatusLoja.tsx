@@ -10,7 +10,7 @@ const StatusLoja: React.FC = () => {
 
       // Horário da loja (ajuste aqui)
       const abre: number = 8;
-      const fecha: number = 18;
+      const fecha: number = 24;
 
       if (hora >= abre && hora < fecha) {
         setAberto(true);
