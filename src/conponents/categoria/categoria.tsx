@@ -11,7 +11,7 @@ export function Categorias() {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const [nome, setNome] = useState("");
 
-  // Buscar categorias
+ 
   async function carregarCategorias() {
     try {
       const response = await api.get("/categorias");
@@ -21,7 +21,7 @@ export function Categorias() {
     }
   }
 
-  // Criar categoria
+ 
   async function salvarCategoria(e: React.FormEvent) {
     e.preventDefault();
 

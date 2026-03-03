@@ -21,7 +21,7 @@ const StatusLoja: React.FC = () => {
 
     verificarHorario();
 
-    // Atualiza a cada 1 minuto
+
     const timer: number = window.setInterval(verificarHorario, 60000);
 
     return () => clearInterval(timer);
