@@ -1,0 +1,22 @@
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.status.aberto {
+  color: green;
+}
+
+.status.fechado {
+  color: red;
+}
+
+.aviso {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ffe5e5;
+  border-radius: 10px;
+  font-size: 14px;
+}

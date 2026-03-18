@@ -1,0 +1,32 @@
+.categorias {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 15px;
+}
+
+.categoria {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.categoria.ativa {
+  background: #ff3b3b;
+  color: white;
+}
+
+
+ .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}  

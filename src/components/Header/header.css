@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  height: 180px;
+  background: url('/assets/banner.jpg') center/cover;
+}
+
+/* logo redondo */
+.logo {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* barra info */
+.info-box {
+  background: white;
+  margin: -30px 15px 10px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.busca{
+      display: flex;
+    justify-content: end;
+    margin: 4px;
+}

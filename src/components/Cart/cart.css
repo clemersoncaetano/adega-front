@@ -1,0 +1,24 @@
+.carrinho-box {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total {
+  margin-top: auto;
+  font-weight: bold;
+  font-size: 18px;
+}
