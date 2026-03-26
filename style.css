@@ -1,7 +1,67 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #2b2b2b; /* fundo escuro */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(46, 168, 95, 0.18), transparent 28%),
+    linear-gradient(180deg, #f6f1ea 0%, #efe6db 100%);
+  color: #24150d;
   display: flex;
   justify-content: center;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+}
+
+.app-content {
+  padding-bottom: 32px;
+}
+
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 16px 0;
+}
+
+.app-cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #24150d;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(36, 21, 13, 0.18);
+}
+
+.app-cart-badge {
+  min-width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #2ea85f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .app-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-cart-button {
+    justify-content: center;
+  }
 }

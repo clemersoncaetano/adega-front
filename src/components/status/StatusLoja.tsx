@@ -7,8 +7,6 @@ function StatusLoja() {
 
   return (
     <div>
-      <h2>Status da loja:</h2>
-
       {aberto ? (
         <p style={{ color: "green" }}>🟢 Loja aberta</p>
       ) : (

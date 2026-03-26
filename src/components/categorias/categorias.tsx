@@ -16,8 +16,6 @@ export default function Categorias() {
 
   return (
     <div>
-      <h2>Categorias</h2>
-
       <ul>
         {categorias.map((cat) => (
           <li key={cat.id}>{cat.nome}</li>

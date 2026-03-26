@@ -1,56 +1,35 @@
-import { useEffect, useState } from "react";
-import { api } from "../../api/api";
+import type { Categoria } from "../../types";
+import "./categorias.css";
 
-interface Categoria {
-  id: number;
-  nome: string;
-}
+type Props = {
+  categorias: Categoria[];
+  categoriaAtiva: number | null;
+  onSelecionar?: (id: number | null) => void;
+};
 
-interface Props {
-  onSelecionar: (id: number | null) => void;
-}
-
-export function CategoriaFiltro({ onSelecionar }: Props) {
-
-  const [categorias, setCategorias] = useState<Categoria[]>([]);
-  const [categoriaAtiva, setCategoriaAtiva] = useState<number | null>(null);
-
-  async function carregarCategorias() {
-    const response = await api.get("api/categorias");
-    setCategorias(response.data);
-  }
-
-  useEffect(() => {
-    carregarCategorias();
-  }, []);
-
-  function selecionar(id: number | null) {
-    setCategoriaAtiva(id);
-    onSelecionar(id);
-  }
-
+export default function CategoriaFiltro({
+  categorias,
+  categoriaAtiva,
+  onSelecionar,
+}: Props) {
   return (
     <div className="categorias">
-
-      <button
-        onClick={() => selecionar(null)}
-        className={!categoriaAtiva ? "ativo" : ""}
+      <select
+        className="categorias-select"
+        aria-label="Selecionar categoria"
+        value={categoriaAtiva ?? ""}
+        onChange={(event) => {
+          const value = event.target.value;
+          onSelecionar?.(value ? Number(value) : null);
+        }}
       >
-        Todos
-      </button>
-
-      {categorias.map(cat => (
-
-        <button
-          key={cat.id}
-          onClick={() => selecionar(cat.id)}
-          className={categoriaAtiva === cat.id ? "ativo" : ""}
-        >
-          {cat.nome}
-        </button>
-
-      ))}
-
+        <option value="">Todos os drinks</option>
+        {categorias.map((cat) => (
+          <option key={cat.id} value={cat.id}>
+            {cat.nome}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

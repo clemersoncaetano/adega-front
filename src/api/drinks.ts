@@ -1,9 +1,12 @@
-export async function buscarDrinks() {
-  const res = await fetch("http://localhost:3000/api/drinks");
+import { api } from "./api";
+import type { Drink } from "../types";
 
-  if (!res.ok) {
-    throw new Error("Erro ao buscar drinks");
-  }
+export async function buscarDrinksPorCategoria(
+  categoriaId: number,
+): Promise<Drink[]> {
+  const response = await api.get("/drinks", {
+    params: { categoria_id: categoriaId },
+  });
 
-  return res.json();
+  return response.data;
 }

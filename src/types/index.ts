@@ -1,11 +1,9 @@
-
 export interface Categoria {
   id: number;
   nome: string;
 }
 
 export interface Drink {
-  toFixed(arg0: number): import("react").ReactNode;
   id: number;
   nome: string;
   descricao: string;
@@ -13,11 +11,9 @@ export interface Drink {
   imagem: string;
   categoria_id: number;
 }
-export interface Drink {
-  id: number;
-  nome: string;
-  preco: number;
-  descricao: string;
+
+export interface CartItem extends Drink {
+  quantidade: number;
 }
 
 export interface ItemPedido {
